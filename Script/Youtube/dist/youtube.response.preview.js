@@ -2862,8 +2862,8 @@
                     debug: "\u542F\u52A8\u8C03\u8BD5\u6A21\u5F0F"
                 },
                 n = {
-                    lyricLang: "en-us",
-                    captionLang: "en-us",
+                    lyricLang: "en-US",
+                    captionLang: "en-US",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
@@ -3104,7 +3104,7 @@ ${c[0][g][0]}`
                         en: "English",
                         vi: "Ti\u1EBFng Vi\u1EC7t",
                         "zh-Hant": "\u4E2D\u6587\uFF08\u7E41\u9AD4\uFF09",
-                        "en-us": "\u4E2D\u6587\uFF08\u7B80\u4F53\uFF09",
+                        "en-US": "\u4E2D\u6587\uFF08\u7B80\u4F53\uFF09",
                         und: "@VirgilClyne"
                     };
                     n.translationLanguages = Object.entries(i).map(([a, c]) => new Je({
