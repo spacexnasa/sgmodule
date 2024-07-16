@@ -2863,7 +2863,7 @@
                 },
                 n = {
                     lyricLang: "en",
-                    captionLang: "English auto-generated",
+                    captionLang: "auto-generated",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
@@ -3081,7 +3081,7 @@ ${c[0][g][0]}`
                                 baseUrl: s[f].baseUrl + `&tlang=${e}`,
                                 name: {
                                     runs: [{
-                                        text: `@Enhance (${e})`
+                                        text: `English (${e})`
                                     }]
                                 },
                                 vssId: `.${e}`,
