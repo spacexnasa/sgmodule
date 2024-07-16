@@ -2863,7 +2863,7 @@
                 },
                 n = {
                     lyricLang: "en",
-                    captionLang: "@VirgilClyne",
+                    captionLang: "und",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
