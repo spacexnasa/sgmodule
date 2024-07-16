@@ -2863,7 +2863,7 @@
                 },
                 n = {
                     lyricLang: "en",
-                    captionLang: "auto-generated",
+                    captionLang: "@VirgilClyne",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
@@ -3081,7 +3081,7 @@ ${c[0][g][0]}`
                                 baseUrl: s[f].baseUrl + `&tlang=${e}`,
                                 name: {
                                     runs: [{
-                                        text: `English (${e})`
+                                        text: `@Enhance (${e})`
                                     }]
                                 },
                                 vssId: `.${e}`,
