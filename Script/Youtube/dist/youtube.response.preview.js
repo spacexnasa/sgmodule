@@ -1,4 +1,4 @@
-// Build: 2024/6/11 21:59:22
+// Build: 2024/07/16 11:05:00
 (() => {
     var _t = Object.defineProperty;
     var Yt = (t, e, n) => e in t ? _t(t, e, {
@@ -3104,7 +3104,7 @@ ${c[0][g][0]}`
                         en: "English",
                         vi: "Ti\u1EBFng Vi\u1EC7t",
                         "zh-Hant": "\u4E2D\u6587\uFF08\u7E41\u9AD4\uFF09",
-                        "en-US": "\u4E2D\u6587\uFF08\u7B80\u4F53\uFF09",
+                        "zh-Hans": "\u4E2D\u6587\uFF08\u7B80\u4F53\uFF09",
                         und: "@VirgilClyne"
                     };
                     n.translationLanguages = Object.entries(i).map(([a, c]) => new Je({
