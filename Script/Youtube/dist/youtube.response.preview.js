@@ -2863,7 +2863,7 @@
                 },
                 n = {
                     lyricLang: "en",
-                    captionLang: "English (auto-generated)",
+                    captionLang: "(auto-generated)",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
