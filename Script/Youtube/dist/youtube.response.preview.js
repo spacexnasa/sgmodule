@@ -2862,8 +2862,8 @@
                     debug: "\u542F\u52A8\u8C03\u8BD5\u6A21\u5F0F"
                 },
                 n = {
-                    lyricLang: "en-US",
-                    captionLang: "en-US",
+                    lyricLang: "en",
+                    captionLang: "en",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
@@ -2977,7 +2977,7 @@
     }
 
     function Gt(t, e) {
-        return `https://translate.google.com/translate_a/single?client=gtx&sl=auto&tl=${e}&hl=en-US&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&source=bh&ssel=0&tsel=0&kc=1&tk=${ir(t)}&q=${encodeURIComponent(t)}`
+        return `https://translate.google.com/translate_a/single?client=gtx&sl=auto&tl=${e}&hl=en&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&source=bh&ssel=0&tsel=0&kc=1&tk=${ir(t)}&q=${encodeURIComponent(t)}`
     }
     var X = class extends D {
             constructor(e = Rt, n = "Browse") {
