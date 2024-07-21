@@ -1,4 +1,4 @@
-#!url=https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Loon/Plugin/RedPaper_remove_ads.plugin
+#!url=https://raw.githubusercontent.com/spacexnasa/sgmodule/master/remove_redbook_remove_ads.module
 #!name = 小红书去广告
 #!desc = 过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。
 #!openUrl = https://apps.apple.com/app/id741292507
