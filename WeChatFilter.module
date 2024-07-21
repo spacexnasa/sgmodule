@@ -1,0 +1,20 @@
+#!url=https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
+#!name = 微信公众号去广告-by-spacexnasa
+#!desc = 过滤微信公众号广告-by-spacexnasa
+#!openUrl = https://apps.apple.com/app/id414478124
+#!author = RuCu6
+#!keyword = 功能增强, RuCu6
+#!homepage = https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Plugin
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
+#!date = 2024-07-13 21:08:47
+[Rule]
+DOMAIN, wxsnsdy.wxs.qq.com, REJECT
+DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
+URL-REGEX, ^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\?, REJECT-DICT
+
+[URL Rewrite]
+# 移除公众号中的推广内容 //mp.weixin.qq.com
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? reject-dict
+[Mitm]
+hostname = mp.weixin.qq.com, *.wxs.qq.com
