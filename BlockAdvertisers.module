@@ -224,4 +224,4 @@ DOMAIN, janapi.jd.com, REJECT
 # http-response ^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\? script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/BlockAdvertisers/BlockAdvertisers.js, requires-body = true
 
 [Mitm]
-hostname = api-access.pangolin-sdk-toutiao?.com, api-access.pangolin-sdk-toutiao-b.com, ether-pack.pangolin-sdk-toutiao.com, gromore.pangolin-sdk-toutiao.com, lf?-cdn-tos.bytescm.com, lf?-analytics.bytescm.com, sf?-fe-tos.pglstatp-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, 
+hostname = %APPEND% api-access.pangolin-sdk-toutiao?.com, api-access.pangolin-sdk-toutiao-b.com, ether-pack.pangolin-sdk-toutiao.com, gromore.pangolin-sdk-toutiao.com, lf?-cdn-tos.bytescm.com, lf?-analytics.bytescm.com, sf?-fe-tos.pglstatp-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, 
