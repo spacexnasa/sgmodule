@@ -9,7 +9,7 @@
 
 [Rule]
 # 放行规则
-DOMAIN, ad.12306.cn, DIRECT
+DOMAIN, ad.12306.cn, 国内
 
 [Script]
 # 移除12306开屏广告
