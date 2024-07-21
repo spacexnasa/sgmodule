@@ -16,4 +16,4 @@ DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? - reject-dict
 ^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\? - REJECT-DICT
 [Mitm]
-hostname = mp.weixin.qq.com, *.wxs.qq.com
+hostname = %APPEND% mp.weixin.qq.com, *.wxs.qq.com
