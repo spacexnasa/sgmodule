@@ -2855,15 +2855,15 @@
         }
         decodeArgument() {
             let e = {
-                    lyricLang: "\u6B4C\u8BCD\u7FFB\u8BD1\u8BED\u8A00",
-                    captionLang: "\u5B57\u5E55\u7FFB\u8BD1\u8BED\u8A00",
+                    //lyricLang: "\u6B4C\u8BCD\u7FFB\u8BD1\u8BED\u8A00",
+                    //captionLang: "\u5B57\u5E55\u7FFB\u8BD1\u8BED\u8A00",
                     blockUpload: "\u5C4F\u853D\u4E0A\u4F20\u6309\u94AE",
                     blockImmersive: "\u5C4F\u853D\u9009\u6BB5\u6309\u94AE",
                     debug: "\u542F\u52A8\u8C03\u8BD5\u6A21\u5F0F"
                 },
                 n = {
-                    lyricLang: "en",
-                    captionLang: "en",
+                    //lyricLang: "en",
+                    //captionLang: "en",
                     blockUpload: !0,
                     blockImmersive: !0,
                     debug: !1
@@ -3061,7 +3061,7 @@ ${c[0][g][0]}`
             }
             addTranslateCaption() {
                 let e = this.argument.captionLang;
-                e !== "off" && this.iterate(this.message, "captionTracks", (n, r) => {
+                e == "off" && this.iterate(this.message, "captionTracks", (n, r) => {
                     let s = n.captionTracks,
                         o = n.audioTracks;
                     if (Array.isArray(s)) {
