@@ -3081,7 +3081,7 @@ ${c[0][g][0]}`
                                 baseUrl: s[f].baseUrl + `&tlang=${e}`,
                                 name: {
                                     runs: [{
-                                        text: English (auto-generated)
+                                        text: `@Enhance (${e})`
                                     }]
                                 },
                                 vssId: `.${e}`,
@@ -3111,7 +3111,7 @@ ${c[0][g][0]}`
                         languageCode: a,
                         languageName: {
                             runs: [{
-                                text: c
+                                text: `@Enhance (${e})`
                             }]
                         }
                     })), r.length = 0
