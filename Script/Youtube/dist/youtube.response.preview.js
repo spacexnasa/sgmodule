@@ -3081,7 +3081,7 @@ ${c[0][g][0]}`
                                 baseUrl: s[f].baseUrl + `&tlang=${e}`,
                                 name: {
                                     runs: [{
-                                        text: `@Enhance (${e})`
+                                        text: English (auto-generated)
                                     }]
                                 },
                                 vssId: `.${e}`,
