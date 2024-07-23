@@ -2977,7 +2977,7 @@
     }
 
     function Gt(t, e) {
-        return `https://translate.google.com/translate_a/single?client=gtx&sl=auto&tl=${e}&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&source=bh&ssel=0&tsel=0&kc=1&tk=${ir(t)}&q=${encodeURIComponent(t)}`
+        return `https://translate.google.com/translate_a/single?client=gtx&sl=auto&tl=${e}&hl=en-US&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&source=bh&ssel=0&tsel=0&kc=1&tk=${ir(t)}&q=${encodeURIComponent(t)}`
     }
     var X = class extends D {
             constructor(e = Rt, n = "Browse") {
