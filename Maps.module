@@ -10,6 +10,7 @@
 # 🗺️ Amap
 DOMAIN-SUFFIX,is.autonavi.com,国内
 # 🗺️ Traffic
+DOMAIN,gspe1-ssl.ls.apple.com,美帝
 DOMAIN,gspe12-ssl.ls.apple.com,美帝
 DOMAIN,gspe12-cn-ssl.ls.apple.com,国内
 # 🗺️ Tiles
