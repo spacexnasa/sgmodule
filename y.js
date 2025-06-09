@@ -4987,7 +4987,7 @@
 			}
 			static getInstance(e, t) {
 				let n = "Surge";
-				return typeof $loon < "u" ? n = "Loon" : typeof $task < "u" && (n = "Shadowrocket"), se.instances[n] || (se.instances[n] = se.classNames[n](e, n, t)), se.instances[n]
+				return typeof $loon < "u" ? n = "Shadowrocket" : typeof $task < "u" && (n = "Shadowrocket"), se.instances[n] || (se.instances[n] = se.classNames[n](e, n, t)), se.instances[n]
 			}
 			createProxy(e) {
 				return new Proxy(e, {
