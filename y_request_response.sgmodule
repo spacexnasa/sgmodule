@@ -1,0 +1,20 @@
+#!url=https://raw.githubusercontent.com/spacexnasa/sgmodule/master/y_request_response.sgmodule
+#!name = youtube_removeadv_request_response
+#!desc =support pip and background
+#!author = Maasea 
+#!homepage=https://github.com/Maasea
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
+[URL Rewrite]
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads|videoplayback|initplayback).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback|initplayback\?)).+&oad - REJECT-200
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - REJECT-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - REJECT-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - REJECT-200
+[Script]
+youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/spacexnasa/sgmodule/master/Script/Youtube/dist/request.js
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/spacexnasa/sgmodule/master/Script/Youtube/dist/response.js,argument="{"lyricLang":"off","captionLang":"off","blockUpload":false,"blockImmersive":false,"debug":false}"
+[MITM]
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
