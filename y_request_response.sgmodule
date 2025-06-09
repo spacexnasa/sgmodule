@@ -1,5 +1,5 @@
 #!url=https://raw.githubusercontent.com/spacexnasa/sgmodule/master/y_request_response.sgmodule
-#!name = youtube_removeadv_request_response
+#!name = youtube去广告
 #!desc =support pip and background
 #!author = Maasea 
 #!homepage=https://github.com/Maasea
@@ -8,7 +8,7 @@
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 [URL Rewrite]
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads|videoplayback|initplayback).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads|videoplayback).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback|initplayback\?)).+&oad - REJECT-200
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - REJECT-200
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - REJECT-200
