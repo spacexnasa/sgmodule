@@ -4986,8 +4986,8 @@
 				this.name = e ?? "", this.isDebug = n?.debug ?? !1, e && this.debug(`${e} Start`), this.className = t ?? "", this.init()
 			}
 			static getInstance(e, t) {
-				let n = "Surge";
-				return typeof $Shadowrocket < "u" ? n = "Shadowrocket" : typeof $task < "u" && (n = "QuanX"), se.instances[n] || (se.instances[n] = se.classNames[n](e, n, t)), se.instances[n]
+				let n = "Shadowrocket";
+				return typeof $loon < "u" ? n = "Shadowrocket" : typeof $task < "u" && (n = "QuanX"), se.instances[n] || (se.instances[n] = se.classNames[n](e, n, t)), se.instances[n]
 			}
 			createProxy(e) {
 				return new Proxy(e, {
@@ -5038,8 +5038,8 @@
 		v = se;
 	ce(v, "instances", {}), ce(v, "classNames", {
 		QuanX: (e, t, n) => new Fe(e, t, n),
-		Surge: (e, t, n) => new me(e, t, n),
-		Shadowrocket: (e, t, n) => new sr(e, t, n)
+		Shadowrocket: (e, t, n) => new me(e, t, n),
+		Loon: (e, t, n) => new sr(e, t, n)
 	});
 	var De = class extends v {
 			getFn(e, t, n) {
