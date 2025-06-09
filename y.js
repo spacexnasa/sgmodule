@@ -4987,7 +4987,7 @@
 			}
 			static getInstance(e, t) {
 				let n = "Surge";
-				return typeof $loon < "u" ? n = "Shadowrocket" : typeof $task < "u" && (n = "Shadowrocket"), se.instances[n] || (se.instances[n] = se.classNames[n](e, n, t)), se.instances[n]
+				return typeof $Shadowrocket < "u" ? n = "Shadowrocket" : typeof $task < "u" && (n = "QuanX"), se.instances[n] || (se.instances[n] = se.classNames[n](e, n, t)), se.instances[n]
 			}
 			createProxy(e) {
 				return new Proxy(e, {
@@ -5037,9 +5037,9 @@
 		},
 		v = se;
 	ce(v, "instances", {}), ce(v, "classNames", {
-		Shadowrocket: (e, t, n) => new Fe(e, t, n),
+		QuanX: (e, t, n) => new Fe(e, t, n),
 		Surge: (e, t, n) => new me(e, t, n),
-		Loon: (e, t, n) => new sr(e, t, n)
+		Shadowrocket: (e, t, n) => new sr(e, t, n)
 	});
 	var De = class extends v {
 			getFn(e, t, n) {
