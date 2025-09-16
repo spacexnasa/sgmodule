@@ -11,7 +11,8 @@
 
 AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
-
+AND,((PROTOCOL,UDP),(DST-PORT,443),(DOMAIN,youtubei.googleapis.com)), REJECT-NO-DROP
+AND,((PROTOCOL,UDP),(DST-PORT,443),(DOMAIN-SUFFIX,googlevideo.com)), REJECT-NO-DROP
 #OR,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT
 #OR,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
 
