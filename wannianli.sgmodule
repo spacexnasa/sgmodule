@@ -14,11 +14,11 @@
 DOMAIN, sdk.ad.sfys365.com, REJECT
 
 [URL Rewrite]
-^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/auth\/voice_room_entrance\/list\? reject-dict
-^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/fortune\/question_spots\/panel\? reject-dict
-^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/jujia\/flow\? reject-dict
-^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/album\/hl_card\? reject-dict
-^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/fortune\/overview\? reject-dict
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/auth\/voice_room_entrance\/list\? _ REJECT-DICT
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/fortune\/question_spots\/panel\? _ REJECT-DICT
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/jujia\/flow\? _ REJECT-DICT
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/album\/hl_card\? _ REJECT-DICT
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/fortune\/overview\? _ REJECT-DICT
 
 [Body Rewrite]
 ^https:\/\/v0-client-lz\.rili\.cn\/lizhi\/api\/zhwnl\/cal_module\/(datas|config)\? http-request-jq '.data |= map(select(.module_name as $name | ["实用工具","会员下icon","天气页面_右上角图标","天气页面_24小时","天气页面_15日","每日插屏","下拉屏保","星座Tab（黄历页）"] | index($name) != null))'
