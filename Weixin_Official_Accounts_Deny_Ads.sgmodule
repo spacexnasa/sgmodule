@@ -24,7 +24,6 @@ DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 
 [URL Rewrite]
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? _ REJECT-DICT
-^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword _ REJECT-DICT
 # 移除微信公众号文章底栏都在搜 @wish
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword _ REJECT-DICT
 
