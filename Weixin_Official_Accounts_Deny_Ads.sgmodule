@@ -18,5 +18,5 @@ DOMAIN-SUFFIX,wxs.qq.com,REJECT
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword _ REJECT-DICT
 
 [MITM]
-hostname=mp.weixin.qq.com
+hostname=%APPEND% mp.weixin.qq.com
 
