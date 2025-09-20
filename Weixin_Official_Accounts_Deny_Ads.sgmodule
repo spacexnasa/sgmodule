@@ -13,7 +13,7 @@
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT
 
-[Rewrite]
+[URL Rewrite]
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? _ REJECT-DICT
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword _ REJECT-DICT
 
