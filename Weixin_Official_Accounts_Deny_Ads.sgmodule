@@ -12,7 +12,7 @@
 
 [Rule]
 ## QQ Music
-OMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT
 DOMAIN, ad.tencentmusic.com, REJECT
 DOMAIN, adcdn.tencentmusic.com, REJECT
 DOMAIN, adcdn6.tencentmusic.com, REJECT
