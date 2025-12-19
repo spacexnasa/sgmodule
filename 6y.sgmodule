@@ -10,15 +10,13 @@
 
 
 [Rule]
-#AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT
-#AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
-
-AND, ((PROTOCOL,QUIC),(DOMAIN,youtubei.googleapis.com)), REJECT-NO-DROP
-AND, ((PROTOCOL,QUIC),(DOMAIN-SUFFIX,googlevideo.com)), REJECT-NO-DROP
+AND,(PROTOCOL,UDP),((DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
+AND,(PROTOCOL,UDP),((DOMAIN,youtubei.googleapis.com)),REJECT-NO-DROP
+AND,((PROTOCOL,QUIC),(DOMAIN,youtubei.googleapis.com)),REJECT-NO-DROP
+AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
 
 #[Map Local]
 #^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
-
 [URL Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
 
