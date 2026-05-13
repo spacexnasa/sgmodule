@@ -3,6 +3,6 @@
 #!author = pinterest去广告 
 #!homepage=https://gfw.top    
 [MITM]
-hostname = api.pinterest.com
+hostname = %APPEND% api.pinterest.com
 [URL Rewrite]    
 ^https:\/\/api\.pinterest\.com\/v3\/feeds\/home\/\? response-body-json-jq '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'    
