@@ -1,7 +1,9 @@
 #!name = pinterest 去广告
 #!desc = pinterest_简洁清爽
 #!author = pinterest去广告 
-#!homepage=https://gfw.top    
+#!homepage=https://gfw.top
+#!url = https://raw.githubusercontent.com/spacexnasa/sgmodule/master/Pinterest.sgmodule
+
 [MITM]
 hostname = %APPEND% api.pinterest.com
 [URL Rewrite]    
