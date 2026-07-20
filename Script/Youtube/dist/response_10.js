@@ -1,34 +1,34 @@
-// Build: 2026/7/12 22:44:32
+// Build: 2026/7/19 16:16:39
 (() => {
-  var ci = Object.create;
+  var fi = Object.create;
   var Me = Object.defineProperty;
-  var ui = Object.getOwnPropertyDescriptor;
-  var fi = Object.getOwnPropertyNames;
-  var di = Object.getPrototypeOf,
-    pi = Object.prototype.hasOwnProperty;
-  var yi = (l, e, t) => e in l ? Me(l, e, {
+  var di = Object.getOwnPropertyDescriptor;
+  var pi = Object.getOwnPropertyNames;
+  var yi = Object.getPrototypeOf,
+    hi = Object.prototype.hasOwnProperty;
+  var mi = (l, e, t) => e in l ? Me(l, e, {
     enumerable: !0,
     configurable: !0,
     writable: !0,
     value: t
   }) : l[e] = t;
-  var hi = (l, e) => () => (e || l((e = {
+  var gi = (l, e) => () => (e || l((e = {
     exports: {}
   }).exports, e), e.exports);
-  var mi = (l, e, t, n) => {
+  var bi = (l, e, t, n) => {
     if (e && typeof e == "object" || typeof e == "function")
-      for (let i of fi(e)) !pi.call(l, i) && i !== t && Me(l, i, {
+      for (let i of pi(e)) !hi.call(l, i) && i !== t && Me(l, i, {
         get: () => e[i],
-        enumerable: !(n = ui(e, i)) || n.enumerable
+        enumerable: !(n = di(e, i)) || n.enumerable
       });
     return l
   };
-  var m = (l, e, t) => (t = l != null ? ci(di(l)) : {}, mi(e || !l || !l.__esModule ? Me(t, "default", {
+  var g = (l, e, t) => (t = l != null ? fi(yi(l)) : {}, bi(e || !l || !l.__esModule ? Me(t, "default", {
     value: l,
     enumerable: !0
   }) : t, l));
-  var pe = (l, e, t) => (yi(l, typeof e != "symbol" ? e + "" : e, t), t);
-  var h = hi(xr => {
+  var pe = (l, e, t) => (mi(l, typeof e != "symbol" ? e + "" : e, t), t);
+  var h = gi(Nr => {
     "use strict";
     (function(l) {
       function e() {}
@@ -118,12 +118,12 @@
         }
         return o ? N.subarray(0, C) : N.slice(0, C)
       }, w || (l.TextDecoder = e, l.TextEncoder = t)
-    })("" + void 0 == typeof global ? "" + void 0 == typeof globalThis ? xr : globalThis : global)
+    })("" + void 0 == typeof global ? "" + void 0 == typeof globalThis ? Nr : globalThis : global)
   });
-  var Cc = m(h(), 1);
-  var Ql = m(h(), 1);
-  var Do = m(h());
-  var _i = m(h());
+  var Wc = g(h(), 1);
+  var tc = g(h(), 1);
+  var jo = g(h());
+  var Xi = g(h());
 
   function Be(l) {
     let e = typeof l;
@@ -134,10 +134,10 @@
     return e
   }
 
-  function Wr(l) {
+  function Sr(l) {
     return l !== null && typeof l == "object" && !Array.isArray(l)
   }
-  var Xi = m(h()),
+  var Yi = g(h()),
     v = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
     Ie = [];
   for (let l = 0; l < v.length; l++) Ie[v[l].charCodeAt(0)] = l;
@@ -200,7 +200,7 @@
     }
     return t && (e += v[i], e += "=", t == 1 && (e += "=")), e
   }
-  var Yi = m(h()),
+  var Zi = g(h()),
     d;
   (function(l) {
     l.symbol = Symbol.for("protobuf-ts/unknown"), l.onRead = (t, n, i, r, c) => {
@@ -229,11 +229,11 @@
   (function(l) {
     l[l.Varint = 0] = "Varint", l[l.Bit64 = 1] = "Bit64", l[l.LengthDelimited = 2] = "LengthDelimited", l[l.StartGroup = 3] = "StartGroup", l[l.EndGroup = 4] = "EndGroup", l[l.Bit32 = 5] = "Bit32"
   })(f || (f = {}));
-  var oa = m(h());
-  var ta = m(h());
-  var Zi = m(h());
+  var la = g(h());
+  var ra = g(h());
+  var ea = g(h());
 
-  function Nr() {
+  function Or() {
     let l = 0,
       e = 0;
     for (let n = 0; n < 28; n += 7) {
@@ -312,7 +312,7 @@
     }
   }
 
-  function Sr() {
+  function Pr() {
     let l = this.buf[this.pos++],
       e = l & 127;
     if (!(l & 128)) return this.assertBounds(), e;
@@ -326,7 +326,7 @@
   }
   var x;
 
-  function gi() {
+  function ki() {
     let l = new DataView(new ArrayBuffer(8));
     x = globalThis.BigInt !== void 0 && typeof l.getBigInt64 == "function" && typeof l.getBigUint64 == "function" && typeof l.setBigInt64 == "function" && typeof l.setBigUint64 == "function" ? {
       MIN: BigInt("-9223372036854775808"),
@@ -337,12 +337,12 @@
       V: l
     } : void 0
   }
-  gi();
+  ki();
 
-  function Or(l) {
+  function Ur(l) {
     if (!l) throw new Error("BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support")
   }
-  var Pr = /^-?[0-9]+$/,
+  var Er = /^-?[0-9]+$/,
     Se = 4294967296,
     Ne = 2147483648,
     Oe = class {
@@ -376,7 +376,7 @@
         } else switch (typeof e) {
           case "string":
             if (e == "0") return this.ZERO;
-            if (e = e.trim(), !Pr.test(e)) throw new Error("string is no integer");
+            if (e = e.trim(), !Er.test(e)) throw new Error("string is no integer");
             let [t, n, i] = ve(e);
             if (t) throw new Error("signed value for ulong");
             return new O(n, i);
@@ -392,7 +392,7 @@
         return x ? this.toBigInt().toString() : We(this.lo, this.hi)
       }
       toBigInt() {
-        return Or(x), x.V.setInt32(0, this.lo, !0), x.V.setInt32(4, this.hi, !0), x.V.getBigUint64(0, !0)
+        return Ur(x), x.V.setInt32(0, this.lo, !0), x.V.setInt32(4, this.hi, !0), x.V.getBigUint64(0, !0)
       }
     };
   O.ZERO = new O(0, 0);
@@ -414,7 +414,7 @@
       } else switch (typeof e) {
         case "string":
           if (e == "0") return this.ZERO;
-          if (e = e.trim(), !Pr.test(e)) throw new Error("string is no integer");
+          if (e = e.trim(), !Er.test(e)) throw new Error("string is no integer");
           let [t, n, i] = ve(e);
           if (t) {
             if (i > Ne || i == Ne && n != 0) throw new Error("signed long too small")
@@ -445,21 +445,21 @@
       return We(this.lo, this.hi)
     }
     toBigInt() {
-      return Or(x), x.V.setInt32(0, this.lo, !0), x.V.setInt32(4, this.hi, !0), x.V.getBigInt64(0, !0)
+      return Ur(x), x.V.setInt32(0, this.lo, !0), x.V.setInt32(4, this.hi, !0), x.V.getBigInt64(0, !0)
     }
   };
   T.ZERO = new T(0, 0);
-  var Ur = {
+  var Fr = {
     readUnknownField: !0,
     readerFactory: l => new Ke(l)
   };
 
-  function Er(l) {
-    return l ? Object.assign(Object.assign({}, Ur), l) : Ur
+  function Lr(l) {
+    return l ? Object.assign(Object.assign({}, Fr), l) : Fr
   }
   var Ke = class {
     constructor(e, t) {
-      this.varint64 = Nr, this.uint32 = Sr, this.buf = e, this.len = e.length, this.pos = 0, this.view = new DataView(e.buffer, e.byteOffset, e.byteLength), this.textDecoder = t ?? new TextDecoder("utf-8", {
+      this.varint64 = Or, this.uint32 = Pr, this.buf = e, this.len = e.length, this.pos = 0, this.view = new DataView(e.buffer, e.byteOffset, e.byteLength), this.textDecoder = t ?? new TextDecoder("utf-8", {
         fatal: !0,
         ignoreBOM: !0
       })
@@ -547,39 +547,39 @@
       return this.textDecoder.decode(this.bytes())
     }
   };
-  var pa = m(h());
-  var la = m(h());
+  var ha = g(h());
+  var ua = g(h());
 
   function R(l, e) {
     if (!l) throw new Error(e)
   }
-  var bi = 34028234663852886e22,
-    ki = -34028234663852886e22,
-    Ri = 4294967295,
-    wi = 2147483647,
-    Bi = -2147483648;
+  var Ri = 34028234663852886e22,
+    wi = -34028234663852886e22,
+    Bi = 4294967295,
+    Ii = 2147483647,
+    Ti = -2147483648;
 
   function H(l) {
     if (typeof l != "number") throw new Error("invalid int 32: " + typeof l);
-    if (!Number.isInteger(l) || l > wi || l < Bi) throw new Error("invalid int 32: " + l)
+    if (!Number.isInteger(l) || l > Ii || l < Ti) throw new Error("invalid int 32: " + l)
   }
 
   function X(l) {
     if (typeof l != "number") throw new Error("invalid uint 32: " + typeof l);
-    if (!Number.isInteger(l) || l > Ri || l < 0) throw new Error("invalid uint 32: " + l)
+    if (!Number.isInteger(l) || l > Bi || l < 0) throw new Error("invalid uint 32: " + l)
   }
 
   function ee(l) {
     if (typeof l != "number") throw new Error("invalid float 32: " + typeof l);
-    if (Number.isFinite(l) && (l > bi || l < ki)) throw new Error("invalid float 32: " + l)
+    if (Number.isFinite(l) && (l > Ri || l < wi)) throw new Error("invalid float 32: " + l)
   }
-  var Fr = {
+  var Ar = {
     writeUnknownFields: !0,
     writerFactory: () => new He
   };
 
-  function Lr(l) {
-    return l ? Object.assign(Object.assign({}, Fr), l) : Fr
+  function Dr(l) {
+    return l ? Object.assign(Object.assign({}, Ar), l) : Ar
   }
   var He = class {
     constructor(e) {
@@ -679,29 +679,29 @@
       return xe(t.lo, t.hi, this.buf), this
     }
   };
-  var ha = m(h()),
-    Ar = {
+  var ga = g(h()),
+    $r = {
       emitDefaultValues: !1,
       enumAsInteger: !1,
       useProtoFieldName: !1,
       prettySpaces: 0
     },
-    Dr = {
+    jr = {
       ignoreUnknownFields: !1
     };
 
-  function $r(l) {
-    return l ? Object.assign(Object.assign({}, Dr), l) : Dr
+  function Vr(l) {
+    return l ? Object.assign(Object.assign({}, jr), l) : jr
   }
 
-  function jr(l) {
-    return l ? Object.assign(Object.assign({}, Ar), l) : Ar
+  function Mr(l) {
+    return l ? Object.assign(Object.assign({}, $r), l) : $r
   }
-  var ga = m(h()),
+  var ka = g(h()),
     Pe = Symbol.for("protobuf-ts/message-type");
-  var Fo = m(h());
-  var Ba = m(h());
-  var ka = m(h());
+  var Ao = g(h());
+  var Ta = g(h());
+  var wa = g(h());
 
   function _e(l) {
     let e = !1,
@@ -725,14 +725,14 @@
     l[l.NO = 0] = "NO", l[l.PACKED = 1] = "PACKED", l[l.UNPACKED = 2] = "UNPACKED"
   })(ye || (ye = {}));
 
-  function Vr(l) {
+  function vr(l) {
     var e, t, n, i;
     return l.localName = (e = l.localName) !== null && e !== void 0 ? e : _e(l.name), l.jsonName = (t = l.jsonName) !== null && t !== void 0 ? t : _e(l.name), l.repeat = (n = l.repeat) !== null && n !== void 0 ? n : ye.NO, l.opt = (i = l.opt) !== null && i !== void 0 ? i : l.repeat || l.oneof ? !1 : l.kind == "message", l
   }
-  var Na = m(h());
-  var Ta = m(h());
+  var Oa = g(h());
+  var xa = g(h());
 
-  function Mr(l) {
+  function Gr(l) {
     if (typeof l != "object" || l === null || !l.hasOwnProperty("oneofKind")) return !1;
     switch (typeof l.oneofKind) {
       case "string":
@@ -783,7 +783,7 @@
       if (t < 1) return !0;
       for (let c of r.oneofs) {
         let o = e[c];
-        if (!Mr(o)) return !1;
+        if (!Gr(o)) return !1;
         if (o.oneofKind === void 0) continue;
         let s = this.fields.find(a => a.localName === o.oneofKind);
         if (!s || !this.field(o[o.oneofKind], s, n, t)) return !1
@@ -885,8 +885,8 @@
       }
     }
   };
-  var ja = m(h());
-  var Pa = m(h());
+  var Ma = g(h());
+  var Ea = g(h());
 
   function D(l, e) {
     switch (e) {
@@ -936,7 +936,7 @@
         } else a = t;
         if (o.kind == "map") {
           if (c === null) continue;
-          this.assert(Wr(c), o.name, c);
+          this.assert(Sr(c), o.name, c);
           let u = a[s];
           for (let [B, w] of Object.entries(c)) {
             this.assert(w !== null, o.name + " map value", null);
@@ -1085,7 +1085,7 @@
       this.assert(!1, i + (r ? " - " + r : ""), e)
     }
   };
-  var Ha = m(h());
+  var Ja = g(h());
   var Fe = class {
     constructor(e) {
       var t;
@@ -1226,8 +1226,8 @@
       }
     }
   };
-  var no = m(h());
-  var Ya = m(h());
+  var io = g(h());
+  var Za = g(h());
 
   function he(l, e = L.STRING) {
     switch (l) {
@@ -1385,7 +1385,7 @@
       }
     }
   };
-  var lo = m(h());
+  var uo = g(h());
   var Ae = class {
     constructor(e) {
       this.info = e
@@ -1527,9 +1527,9 @@
       return [n, i, r || c]
     }
   };
-  var po = m(h());
+  var ho = g(h());
 
-  function vr(l) {
+  function Kr(l) {
     let e = l.messagePrototype ? Object.create(l.messagePrototype) : Object.defineProperty({}, Pe, {
       value: l
     });
@@ -1554,7 +1554,7 @@
     }
     return e
   }
-  var ho = m(h());
+  var go = g(h());
 
   function y(l, e, t) {
     let n, i = t,
@@ -1597,9 +1597,9 @@
       }
     }
   }
-  var bo = m(h());
+  var Ro = g(h());
 
-  function Hr(l, e, t) {
+  function Jr(l, e, t) {
     if (e === t) return !0;
     if (!e || !t) return !1;
     for (let n of l.fields) {
@@ -1610,14 +1610,14 @@
         case "enum":
         case "scalar":
           let o = n.kind == "enum" ? p.INT32 : n.T;
-          if (!(n.repeat ? Gr(o, r, c) : _r(o, r, c))) return !1;
+          if (!(n.repeat ? Hr(o, r, c) : Xr(o, r, c))) return !1;
           break;
         case "map":
-          if (!(n.V.kind == "message" ? Kr(n.V.T(), De(r), De(c)) : Gr(n.V.kind == "enum" ? p.INT32 : n.V.T, De(r), De(c)))) return !1;
+          if (!(n.V.kind == "message" ? _r(n.V.T(), De(r), De(c)) : Hr(n.V.kind == "enum" ? p.INT32 : n.V.T, De(r), De(c)))) return !1;
           break;
         case "message":
           let s = n.T();
-          if (!(n.repeat ? Kr(s, r, c) : s.equals(r, c))) return !1;
+          if (!(n.repeat ? _r(s, r, c) : s.equals(r, c))) return !1;
           break
       }
     }
@@ -1625,7 +1625,7 @@
   }
   var De = Object.values;
 
-  function _r(l, e, t) {
+  function Xr(l, e, t) {
     if (e === t) return !0;
     if (l !== p.BYTES) return !1;
     let n = e,
@@ -1636,30 +1636,30 @@
     return !0
   }
 
-  function Gr(l, e, t) {
+  function Hr(l, e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++)
-      if (!_r(l, e[n], t[n])) return !1;
+      if (!Xr(l, e[n], t[n])) return !1;
     return !0
   }
 
-  function Kr(l, e, t) {
+  function _r(l, e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++)
       if (!l.equals(e[n], t[n])) return !1;
     return !0
   }
-  var Ii = Object.getOwnPropertyDescriptors(Object.getPrototypeOf({})),
-    g = class {
+  var Ci = Object.getOwnPropertyDescriptors(Object.getPrototypeOf({})),
+    m = class {
       constructor(e, t, n) {
-        this.defaultCheckDepth = 16, this.typeName = e, this.fields = t.map(Vr), this.options = n ?? {}, this.messagePrototype = Object.create(null, Object.assign(Object.assign({}, Ii), {
+        this.defaultCheckDepth = 16, this.typeName = e, this.fields = t.map(vr), this.options = n ?? {}, this.messagePrototype = Object.create(null, Object.assign(Object.assign({}, Ci), {
           [Pe]: {
             value: this
           }
         })), this.refTypeCheck = new Ue(this), this.refJsonReader = new Ee(this), this.refJsonWriter = new Fe(this), this.refBinReader = new Le(this), this.refBinWriter = new Ae(this)
       }
       create(e) {
-        let t = vr(this);
+        let t = Kr(this);
         return e !== void 0 && y(this, t, e), t
       }
       clone(e) {
@@ -1667,7 +1667,7 @@
         return y(this, t, e), t
       }
       equals(e, t) {
-        return Hr(this, e, t)
+        return Jr(this, e, t)
       }
       is(e, t = this.defaultCheckDepth) {
         return this.refTypeCheck.is(e, t, !1)
@@ -1679,18 +1679,18 @@
         y(this, e, t)
       }
       fromBinary(e, t) {
-        let n = Er(t);
+        let n = Lr(t);
         return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n)
       }
       fromJson(e, t) {
-        return this.internalJsonRead(e, $r(t))
+        return this.internalJsonRead(e, Vr(t))
       }
       fromJsonString(e, t) {
         let n = JSON.parse(e);
         return this.fromJson(n, t)
       }
       toJson(e, t) {
-        return this.internalJsonWrite(e, jr(t))
+        return this.internalJsonWrite(e, Mr(t))
       }
       toJsonString(e, t) {
         var n;
@@ -1698,7 +1698,7 @@
         return JSON.stringify(i, null, (n = t?.prettySpaces) !== null && n !== void 0 ? n : 0)
       }
       toBinary(e, t) {
-        let n = Lr(t);
+        let n = Dr(t);
         return this.internalBinaryWrite(e, n.writerFactory(), n).finish()
       }
       internalJsonRead(e, t, n) {
@@ -1719,9 +1719,9 @@
         return this.refBinReader.read(e, r, n, t), r
       }
     };
-  var ls = m(h(), 1);
-  var Jo = m(h(), 1);
-  var Je = class extends g {
+  var us = g(h(), 1);
+  var qo = g(h(), 1);
+  var Je = class extends m {
       constructor() {
         super("youtube.component.Label", [{
           no: 1,
@@ -1760,7 +1760,7 @@
       }
     },
     W = new Je,
-    Xe = class extends g {
+    Xe = class extends m {
       constructor() {
         super("youtube.component.Run", [{
           no: 1,
@@ -1798,8 +1798,8 @@
       }
     },
     q = new Xe;
-  var Qo = m(h(), 1);
-  var ze = class extends g {
+  var ts = g(h(), 1);
+  var ze = class extends m {
       constructor() {
         super("youtube.component.ResponseContext", [{
           no: 6,
@@ -1838,7 +1838,7 @@
       }
     },
     $e = new ze,
-    Ze = class extends g {
+    Ze = class extends m {
       constructor() {
         super("youtube.component.ServiceTrackingParam", [{
           no: 1,
@@ -1886,7 +1886,7 @@
       }
     },
     qe = new Ze,
-    Qe = class extends g {
+    Qe = class extends m {
       constructor() {
         super("youtube.component.Param", [{
           no: 1,
@@ -1932,7 +1932,7 @@
       }
     },
     Ye = new Qe;
-  var mt = class extends g {
+  var mt = class extends m {
       constructor() {
         super("youtube.response.browse.Browse", [{
           no: 1,
@@ -1985,8 +1985,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Jr = new mt,
-    gt = class extends g {
+    qr = new mt,
+    gt = class extends m {
       constructor() {
         super("youtube.response.browse.Content", [{
           no: 58173949,
@@ -2040,7 +2040,7 @@
       }
     },
     E = new gt,
-    bt = class extends g {
+    bt = class extends m {
       constructor() {
         super("youtube.response.browse.SingleColumnResultsRenderer", [{
           no: 1,
@@ -2079,7 +2079,7 @@
       }
     },
     et = new bt,
-    kt = class extends g {
+    kt = class extends m {
       constructor() {
         super("youtube.response.browse.BrowseTabSupportedRenderer", [{
           no: 58174010,
@@ -2117,7 +2117,7 @@
       }
     },
     tt = new kt,
-    Rt = class extends g {
+    Rt = class extends m {
       constructor() {
         super("youtube.response.browse.TabRenderer", [{
           no: 4,
@@ -2155,7 +2155,7 @@
       }
     },
     nt = new Rt,
-    wt = class extends g {
+    wt = class extends m {
       constructor() {
         super("youtube.response.browse.SectionListRenderer", [{
           no: 1,
@@ -2194,7 +2194,7 @@
       }
     },
     Y = new wt,
-    Bt = class extends g {
+    Bt = class extends m {
       constructor() {
         super("youtube.response.browse.SectionListSupportedRenderer", [{
           no: 50195462,
@@ -2248,7 +2248,7 @@
       }
     },
     rt = new Bt,
-    It = class extends g {
+    It = class extends m {
       constructor() {
         super("youtube.response.browse.ItemSectionRenderer", [{
           no: 1,
@@ -2287,7 +2287,7 @@
       }
     },
     z = new It,
-    Tt = class extends g {
+    Tt = class extends m {
       constructor() {
         super("youtube.response.browse.RichItemContent", [{
           no: 153515154,
@@ -2325,7 +2325,7 @@
       }
     },
     te = new Tt,
-    Ct = class extends g {
+    Ct = class extends m {
       constructor() {
         super("youtube.response.browse.ElementRenderer", [{
           no: 172660663,
@@ -2363,7 +2363,7 @@
       }
     },
     ne = new Ct,
-    xt = class extends g {
+    xt = class extends m {
       constructor() {
         super("youtube.response.browse.VideoRendererContent", [{
           no: 1,
@@ -2409,7 +2409,7 @@
       }
     },
     it = new xt,
-    Wt = class extends g {
+    Wt = class extends m {
       constructor() {
         super("youtube.response.browse.VideoInfo", [{
           no: 168777401,
@@ -2447,7 +2447,7 @@
       }
     },
     at = new Wt,
-    Nt = class extends g {
+    Nt = class extends m {
       constructor() {
         super("youtube.response.browse.VideoContext", [{
           no: 5,
@@ -2485,7 +2485,7 @@
       }
     },
     ot = new Nt,
-    St = class extends g {
+    St = class extends m {
       constructor() {
         super("youtube.response.browse.VideoContent", [{
           no: 465160965,
@@ -2523,7 +2523,7 @@
       }
     },
     st = new St,
-    Ot = class extends g {
+    Ot = class extends m {
       constructor() {
         super("youtube.response.browse.TimedLyricsRender", [{
           no: 4,
@@ -2561,7 +2561,7 @@
       }
     },
     lt = new Ot,
-    Pt = class extends g {
+    Pt = class extends m {
       constructor() {
         super("youtube.response.browse.TimedLyricsContent", [{
           no: 1,
@@ -2609,7 +2609,7 @@
       }
     },
     ct = new Pt,
-    Ut = class extends g {
+    Ut = class extends m {
       constructor() {
         super("youtube.response.browse.RenderInfo", [{
           no: 183314536,
@@ -2647,7 +2647,7 @@
       }
     },
     ut = new Ut,
-    Et = class extends g {
+    Et = class extends m {
       constructor() {
         super("youtube.response.browse.LayoutRender", [{
           no: 1,
@@ -2685,7 +2685,7 @@
       }
     },
     ft = new Et,
-    Ft = class extends g {
+    Ft = class extends m {
       constructor() {
         super("youtube.response.browse.ShelfRenderer", [{
           no: 5,
@@ -2723,7 +2723,7 @@
       }
     },
     dt = new Ft,
-    Lt = class extends g {
+    Lt = class extends m {
       constructor() {
         super("youtube.response.browse.RichSectionContent", [{
           no: 51431404,
@@ -2761,7 +2761,7 @@
       }
     },
     pt = new Lt,
-    At = class extends g {
+    At = class extends m {
       constructor() {
         super("youtube.response.browse.ReelShelfRenderer", [{
           no: 1,
@@ -2800,7 +2800,7 @@
       }
     },
     yt = new At,
-    Dt = class extends g {
+    Dt = class extends m {
       constructor() {
         super("youtube.response.browse.MusicDescriptionShelfRenderer", [{
           no: 3,
@@ -2846,8 +2846,8 @@
       }
     },
     ht = new Dt;
-  var hs = m(h(), 1);
-  var Vt = class extends g {
+  var gs = g(h(), 1);
+  var Vt = class extends m {
       constructor() {
         super("youtube.response.next.Next", [{
           no: 7,
@@ -2893,7 +2893,7 @@
       }
     },
     re = new Vt,
-    Mt = class extends g {
+    Mt = class extends m {
       constructor() {
         super("youtube.response.next.Content", [{
           no: 51779735,
@@ -2931,7 +2931,7 @@
       }
     },
     $t = new Mt,
-    vt = class extends g {
+    vt = class extends m {
       constructor() {
         super("youtube.response.next.NextResult", [{
           no: 1,
@@ -2969,8 +2969,8 @@
       }
     },
     jt = new vt;
-  var Ts = m(h(), 1);
-  var Kt = class extends g {
+  var xs = g(h(), 1);
+  var Kt = class extends m {
       constructor() {
         super("youtube.response.search.Search", [{
           no: 4,
@@ -3015,8 +3015,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Xr = new Kt,
-    Ht = class extends g {
+    Yr = new Kt,
+    Ht = class extends m {
       constructor() {
         super("youtube.response.search.OnResponseReceivedCommand", [{
           no: 50195462,
@@ -3062,14 +3062,14 @@
       }
     },
     Gt = new Ht;
-  var Os = m(h(), 1);
-  var zt = class extends g {
+  var Us = g(h(), 1);
+  var Zt = class extends m {
       constructor() {
         super("youtube.response.shorts.Shorts", [{
           no: 2,
           name: "entries",
           kind: "message",
-          repeat: 1,
+          repeat: 2,
           T: () => _t
         }])
       }
@@ -3101,8 +3101,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    qr = new zt,
-    Zt = class extends g {
+    zr = new Zt,
+    Qt = class extends m {
       constructor() {
         super("youtube.response.shorts.Entry", [{
           no: 1,
@@ -3139,8 +3139,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    _t = new Zt,
-    Qt = class extends g {
+    _t = new Qt,
+    en = class extends m {
       constructor() {
         super("youtube.response.shorts.Command", [{
           no: 139608561,
@@ -3177,12 +3177,17 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Jt = new Qt,
-    en = class extends g {
+    Jt = new en,
+    tn = class extends m {
       constructor() {
         super("youtube.response.shorts.ReelWatchEndpoint", [{
           no: 8,
           name: "overlay",
+          kind: "message",
+          T: () => Yt
+        }, {
+          no: 16,
+          name: "adClientParams",
           kind: "message",
           T: () => qt
         }])
@@ -3198,7 +3203,10 @@
           let [o, s] = e.tag();
           switch (o) {
             case 8:
-              r.overlay = qt.internalBinaryRead(e, e.uint32(), n, r.overlay);
+              r.overlay = Yt.internalBinaryRead(e, e.uint32(), n, r.overlay);
+              break;
+            case 16:
+              r.adClientParams = qt.internalBinaryRead(e, e.uint32(), n, r.adClientParams);
               break;
             default:
               let a = n.readUnknownField;
@@ -3210,19 +3218,57 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.overlay && qt.internalBinaryWrite(e.overlay, t.tag(8, f.LengthDelimited).fork(), n).join();
+        e.overlay && Yt.internalBinaryWrite(e.overlay, t.tag(8, f.LengthDelimited).fork(), n).join(), e.adClientParams && qt.internalBinaryWrite(e.adClientParams, t.tag(16, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Xt = new en,
-    tn = class extends g {
+    Xt = new tn,
+    nn = class extends m {
+      constructor() {
+        super("youtube.response.shorts.AdClientParams", [{
+          no: 1,
+          name: "isAd",
+          kind: "scalar",
+          T: 8
+        }])
+      }
+      create(e) {
+        let t = globalThis.Object.create(this.messagePrototype);
+        return t.isAd = !1, e !== void 0 && y(this, t, e), t
+      }
+      internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+          c = e.pos + t;
+        for (; e.pos < c;) {
+          let [o, s] = e.tag();
+          switch (o) {
+            case 1:
+              r.isAd = e.bool();
+              break;
+            default:
+              let a = n.readUnknownField;
+              if (a === "throw") throw new globalThis.Error(`Unknown field ${o} (wire type ${s}) for ${this.typeName}`);
+              let u = e.skip(s);
+              a !== !1 && (a === !0 ? d.onRead : a)(this.typeName, r, o, s, u)
+          }
+        }
+        return r
+      }
+      internalBinaryWrite(e, t, n) {
+        e.isAd !== !1 && t.tag(1, f.Varint).bool(e.isAd);
+        let i = n.writeUnknownFields;
+        return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
+      }
+    },
+    qt = new nn,
+    rn = class extends m {
       constructor() {
         super("youtube.response.shorts.Overlay", [{
           no: 139970731,
           name: "reelPlayerOverlayRenderer",
           kind: "message",
-          T: () => Yt
+          T: () => zt
         }])
       }
       create(e) {
@@ -3236,7 +3282,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 139970731:
-              r.reelPlayerOverlayRenderer = Yt.internalBinaryRead(e, e.uint32(), n, r.reelPlayerOverlayRenderer);
+              r.reelPlayerOverlayRenderer = zt.internalBinaryRead(e, e.uint32(), n, r.reelPlayerOverlayRenderer);
               break;
             default:
               let a = n.readUnknownField;
@@ -3248,13 +3294,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.reelPlayerOverlayRenderer && Yt.internalBinaryWrite(e.reelPlayerOverlayRenderer, t.tag(139970731, f.LengthDelimited).fork(), n).join();
+        e.reelPlayerOverlayRenderer && zt.internalBinaryWrite(e.reelPlayerOverlayRenderer, t.tag(139970731, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    qt = new tn,
-    nn = class extends g {
+    Yt = new rn,
+    an = class extends m {
       constructor() {
         super("youtube.response.shorts.ReelPlayerOverlayRenderer", [{
           no: 12,
@@ -3291,9 +3337,9 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Yt = new nn;
-  var As = m(h(), 1);
-  var on = class extends g {
+    zt = new an;
+  var $s = g(h(), 1);
+  var ln = class extends m {
       constructor() {
         super("youtube.response.guide.Guide", [{
           no: 4,
@@ -3341,14 +3387,14 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Yr = new on,
-    sn = class extends g {
+    Zr = new ln,
+    cn = class extends m {
       constructor() {
         super("youtube.response.guide.Item", [{
           no: 117866661,
           name: "guideSectionRenderer",
           kind: "message",
-          T: () => rn
+          T: () => on
         }])
       }
       create(e) {
@@ -3362,7 +3408,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 117866661:
-              r.guideSectionRenderer = rn.internalBinaryRead(e, e.uint32(), n, r.guideSectionRenderer);
+              r.guideSectionRenderer = on.internalBinaryRead(e, e.uint32(), n, r.guideSectionRenderer);
               break;
             default:
               let a = n.readUnknownField;
@@ -3374,20 +3420,20 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.guideSectionRenderer && rn.internalBinaryWrite(e.guideSectionRenderer, t.tag(117866661, f.LengthDelimited).fork(), n).join();
+        e.guideSectionRenderer && on.internalBinaryWrite(e.guideSectionRenderer, t.tag(117866661, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    ie = new sn,
-    ln = class extends g {
+    ie = new cn,
+    un = class extends m {
       constructor() {
         super("youtube.response.guide.GuideSectionRenderer", [{
           no: 1,
           name: "rendererItems",
           kind: "message",
           repeat: 1,
-          T: () => an
+          T: () => sn
         }])
       }
       create(e) {
@@ -3401,7 +3447,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 1:
-              r.rendererItems.push(an.internalBinaryRead(e, e.uint32(), n));
+              r.rendererItems.push(sn.internalBinaryRead(e, e.uint32(), n));
               break;
             default:
               let a = n.readUnknownField;
@@ -3413,13 +3459,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        for (let r = 0; r < e.rendererItems.length; r++) an.internalBinaryWrite(e.rendererItems[r], t.tag(1, f.LengthDelimited).fork(), n).join();
+        for (let r = 0; r < e.rendererItems.length; r++) sn.internalBinaryWrite(e.rendererItems[r], t.tag(1, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    rn = new ln,
-    cn = class extends g {
+    on = new un,
+    fn = class extends m {
       constructor() {
         super("youtube.response.guide.RendererItem", [{
           no: 318370163,
@@ -3464,8 +3510,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    an = new cn,
-    un = class extends g {
+    sn = new fn,
+    dn = class extends m {
       constructor() {
         super("youtube.response.guide.guideEntryRenderer", [{
           no: 1,
@@ -3502,37 +3548,37 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    ae = new un;
-  var Gs = m(h(), 1);
-  var Bn = class extends g {
+    ae = new dn;
+  var Hs = g(h(), 1);
+  var Tn = class extends m {
       constructor() {
         super("youtube.response.player.Player", [{
           no: 7,
           name: "adPlacements",
           kind: "message",
           repeat: 1,
-          T: () => fn
+          T: () => pn
         }, {
           no: 2,
           name: "playabilityStatus",
           kind: "message",
-          T: () => pn
+          T: () => hn
         }, {
           no: 9,
           name: "playbackTracking",
           kind: "message",
-          T: () => mn
+          T: () => bn
         }, {
           no: 10,
           name: "captions",
           kind: "message",
-          T: () => gn
+          T: () => kn
         }, {
           no: 68,
           name: "adSlots",
           kind: "message",
           repeat: 1,
-          T: () => Rn
+          T: () => Bn
         }])
       }
       create(e) {
@@ -3546,19 +3592,19 @@
           let [o, s] = e.tag();
           switch (o) {
             case 7:
-              r.adPlacements.push(fn.internalBinaryRead(e, e.uint32(), n));
+              r.adPlacements.push(pn.internalBinaryRead(e, e.uint32(), n));
               break;
             case 2:
-              r.playabilityStatus = pn.internalBinaryRead(e, e.uint32(), n, r.playabilityStatus);
+              r.playabilityStatus = hn.internalBinaryRead(e, e.uint32(), n, r.playabilityStatus);
               break;
             case 9:
-              r.playbackTracking = mn.internalBinaryRead(e, e.uint32(), n, r.playbackTracking);
+              r.playbackTracking = bn.internalBinaryRead(e, e.uint32(), n, r.playbackTracking);
               break;
             case 10:
-              r.captions = gn.internalBinaryRead(e, e.uint32(), n, r.captions);
+              r.captions = kn.internalBinaryRead(e, e.uint32(), n, r.captions);
               break;
             case 68:
-              r.adSlots.push(Rn.internalBinaryRead(e, e.uint32(), n));
+              r.adSlots.push(Bn.internalBinaryRead(e, e.uint32(), n));
               break;
             default:
               let a = n.readUnknownField;
@@ -3570,21 +3616,21 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        for (let r = 0; r < e.adPlacements.length; r++) fn.internalBinaryWrite(e.adPlacements[r], t.tag(7, f.LengthDelimited).fork(), n).join();
-        e.playabilityStatus && pn.internalBinaryWrite(e.playabilityStatus, t.tag(2, f.LengthDelimited).fork(), n).join(), e.playbackTracking && mn.internalBinaryWrite(e.playbackTracking, t.tag(9, f.LengthDelimited).fork(), n).join(), e.captions && gn.internalBinaryWrite(e.captions, t.tag(10, f.LengthDelimited).fork(), n).join();
-        for (let r = 0; r < e.adSlots.length; r++) Rn.internalBinaryWrite(e.adSlots[r], t.tag(68, f.LengthDelimited).fork(), n).join();
+        for (let r = 0; r < e.adPlacements.length; r++) pn.internalBinaryWrite(e.adPlacements[r], t.tag(7, f.LengthDelimited).fork(), n).join();
+        e.playabilityStatus && hn.internalBinaryWrite(e.playabilityStatus, t.tag(2, f.LengthDelimited).fork(), n).join(), e.playbackTracking && bn.internalBinaryWrite(e.playbackTracking, t.tag(9, f.LengthDelimited).fork(), n).join(), e.captions && kn.internalBinaryWrite(e.captions, t.tag(10, f.LengthDelimited).fork(), n).join();
+        for (let r = 0; r < e.adSlots.length; r++) Bn.internalBinaryWrite(e.adSlots[r], t.tag(68, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    oe = new Bn,
-    In = class extends g {
+    oe = new Tn,
+    Cn = class extends m {
       constructor() {
         super("youtube.response.player.AdPlacement", [{
           no: 84813246,
           name: "adPlacementRenderer",
           kind: "message",
-          T: () => dn
+          T: () => yn
         }])
       }
       create(e) {
@@ -3598,7 +3644,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 84813246:
-              r.adPlacementRenderer = dn.internalBinaryRead(e, e.uint32(), n, r.adPlacementRenderer);
+              r.adPlacementRenderer = yn.internalBinaryRead(e, e.uint32(), n, r.adPlacementRenderer);
               break;
             default:
               let a = n.readUnknownField;
@@ -3610,13 +3656,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.adPlacementRenderer && dn.internalBinaryWrite(e.adPlacementRenderer, t.tag(84813246, f.LengthDelimited).fork(), n).join();
+        e.adPlacementRenderer && yn.internalBinaryWrite(e.adPlacementRenderer, t.tag(84813246, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    fn = new In,
-    Tn = class extends g {
+    pn = new Cn,
+    xn = class extends m {
       constructor() {
         super("youtube.response.player.AdPlacementRenderer", [{
           no: 4,
@@ -3653,8 +3699,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    dn = new Tn,
-    Cn = class extends g {
+    yn = new xn,
+    Wn = class extends m {
       constructor() {
         super("youtube.response.player.PlayabilityStatus", [{
           no: 21,
@@ -3699,14 +3745,14 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    pn = new Cn,
-    xn = class extends g {
+    hn = new Wn,
+    Nn = class extends m {
       constructor() {
         super("youtube.response.player.PictureInPictureSupportedRenderer", [{
           no: 151635310,
           name: "pictureInPictureAbility",
           kind: "message",
-          T: () => yn
+          T: () => mn
         }])
       }
       create(e) {
@@ -3720,7 +3766,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 151635310:
-              r.pictureInPictureAbility = yn.internalBinaryRead(e, e.uint32(), n, r.pictureInPictureAbility);
+              r.pictureInPictureAbility = mn.internalBinaryRead(e, e.uint32(), n, r.pictureInPictureAbility);
               break;
             default:
               let a = n.readUnknownField;
@@ -3732,19 +3778,19 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.pictureInPictureAbility && yn.internalBinaryWrite(e.pictureInPictureAbility, t.tag(151635310, f.LengthDelimited).fork(), n).join();
+        e.pictureInPictureAbility && mn.internalBinaryWrite(e.pictureInPictureAbility, t.tag(151635310, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    me = new xn,
-    Wn = class extends g {
+    me = new Nn,
+    Sn = class extends m {
       constructor() {
         super("youtube.response.player.BackgroundSupportedRenderer", [{
           no: 64657230,
           name: "backgroundAbility",
           kind: "message",
-          T: () => hn
+          T: () => gn
         }])
       }
       create(e) {
@@ -3758,7 +3804,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 64657230:
-              r.backgroundAbility = hn.internalBinaryRead(e, e.uint32(), n, r.backgroundAbility);
+              r.backgroundAbility = gn.internalBinaryRead(e, e.uint32(), n, r.backgroundAbility);
               break;
             default:
               let a = n.readUnknownField;
@@ -3770,13 +3816,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.backgroundAbility && hn.internalBinaryWrite(e.backgroundAbility, t.tag(64657230, f.LengthDelimited).fork(), n).join();
+        e.backgroundAbility && gn.internalBinaryWrite(e.backgroundAbility, t.tag(64657230, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    ge = new Wn,
-    Nn = class extends g {
+    ge = new Sn,
+    On = class extends m {
       constructor() {
         super("youtube.response.player.PictureInPictureAbility", [{
           no: 1,
@@ -3837,8 +3883,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    yn = new Nn,
-    Sn = class extends g {
+    mn = new On,
+    Pn = class extends m {
       constructor() {
         super("youtube.response.player.BackgroundAbility", [{
           no: 1,
@@ -3875,8 +3921,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    hn = new Sn,
-    On = class extends g {
+    gn = new Pn,
+    Un = class extends m {
       constructor() {
         super("youtube.response.player.PlaybackTracking", [{
           no: 1,
@@ -3969,8 +4015,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    mn = new On,
-    Pn = class extends g {
+    bn = new Un,
+    En = class extends m {
       constructor() {
         super("youtube.response.player.Tracking", [{
           no: 1,
@@ -4007,15 +4053,15 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    P = new Pn,
-    Un = class extends g {
+    P = new En,
+    Fn = class extends m {
       constructor() {
         super("youtube.response.player.Captions", [{
           no: 51621377,
           name: "playerCaptionsTrackListRenderer",
           kind: "message",
           jsonName: "playerCaptionsTracklistRenderer",
-          T: () => bn
+          T: () => Rn
         }])
       }
       create(e) {
@@ -4029,7 +4075,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 51621377:
-              r.playerCaptionsTrackListRenderer = bn.internalBinaryRead(e, e.uint32(), n, r.playerCaptionsTrackListRenderer);
+              r.playerCaptionsTrackListRenderer = Rn.internalBinaryRead(e, e.uint32(), n, r.playerCaptionsTrackListRenderer);
               break;
             default:
               let a = n.readUnknownField;
@@ -4041,13 +4087,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.playerCaptionsTrackListRenderer && bn.internalBinaryWrite(e.playerCaptionsTrackListRenderer, t.tag(51621377, f.LengthDelimited).fork(), n).join();
+        e.playerCaptionsTrackListRenderer && Rn.internalBinaryWrite(e.playerCaptionsTrackListRenderer, t.tag(51621377, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    gn = new Un,
-    En = class extends g {
+    kn = new Fn,
+    Ln = class extends m {
       constructor() {
         super("youtube.response.player.PlayerCaptionsTrackListRenderer", [{
           no: 1,
@@ -4060,7 +4106,7 @@
           name: "audioTracks",
           kind: "message",
           repeat: 1,
-          T: () => kn
+          T: () => wn
         }, {
           no: 3,
           name: "translationLanguages",
@@ -4095,7 +4141,7 @@
               r.captionTracks.push(be.internalBinaryRead(e, e.uint32(), n));
               break;
             case 2:
-              r.audioTracks.push(kn.internalBinaryRead(e, e.uint32(), n));
+              r.audioTracks.push(wn.internalBinaryRead(e, e.uint32(), n));
               break;
             case 3:
               r.translationLanguages.push(ke.internalBinaryRead(e, e.uint32(), n));
@@ -4117,15 +4163,15 @@
       }
       internalBinaryWrite(e, t, n) {
         for (let r = 0; r < e.captionTracks.length; r++) be.internalBinaryWrite(e.captionTracks[r], t.tag(1, f.LengthDelimited).fork(), n).join();
-        for (let r = 0; r < e.audioTracks.length; r++) kn.internalBinaryWrite(e.audioTracks[r], t.tag(2, f.LengthDelimited).fork(), n).join();
+        for (let r = 0; r < e.audioTracks.length; r++) wn.internalBinaryWrite(e.audioTracks[r], t.tag(2, f.LengthDelimited).fork(), n).join();
         for (let r = 0; r < e.translationLanguages.length; r++) ke.internalBinaryWrite(e.translationLanguages[r], t.tag(3, f.LengthDelimited).fork(), n).join();
         e.defaultAudioTrackIndex !== void 0 && t.tag(4, f.Varint).int32(e.defaultAudioTrackIndex), e.defaultCaptionTrackIndex !== void 0 && t.tag(6, f.Varint).int32(e.defaultCaptionTrackIndex);
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    bn = new En,
-    Fn = class extends g {
+    Rn = new Ln,
+    An = class extends m {
       constructor() {
         super("youtube.response.player.CaptionTrack", [{
           no: 1,
@@ -4212,8 +4258,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    be = new Fn,
-    Ln = class extends g {
+    be = new An,
+    Dn = class extends m {
       constructor() {
         super("youtube.response.player.AudioTrack", [{
           no: 2,
@@ -4317,8 +4363,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    kn = new Ln,
-    An = class extends g {
+    wn = new Dn,
+    $n = class extends m {
       constructor() {
         super("youtube.response.player.TranslationLanguage", [{
           no: 1,
@@ -4363,14 +4409,14 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    ke = new An,
-    Dn = class extends g {
+    ke = new $n,
+    jn = class extends m {
       constructor() {
         super("youtube.response.player.AdSlot", [{
           no: 424701016,
           name: "render",
           kind: "message",
-          T: () => wn
+          T: () => In
         }])
       }
       create(e) {
@@ -4384,7 +4430,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 424701016:
-              r.render = wn.internalBinaryRead(e, e.uint32(), n, r.render);
+              r.render = In.internalBinaryRead(e, e.uint32(), n, r.render);
               break;
             default:
               let a = n.readUnknownField;
@@ -4396,13 +4442,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.render && wn.internalBinaryWrite(e.render, t.tag(424701016, f.LengthDelimited).fork(), n).join();
+        e.render && In.internalBinaryWrite(e.render, t.tag(424701016, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Rn = new Dn,
-    $n = class extends g {
+    Bn = new jn,
+    Vn = class extends m {
       constructor() {
         super("youtube.response.player.AdSlot.Render", [])
       }
@@ -4418,9 +4464,9 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    wn = new $n;
-  var Ys = m(h(), 1);
-  var Hn = class extends g {
+    In = new Vn;
+  var Zs = g(h(), 1);
+  var Jn = class extends m {
       constructor() {
         super("youtube.response.setting.Setting", [{
           no: 6,
@@ -4469,19 +4515,19 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    zr = new Hn,
-    _n = class extends g {
+    Qr = new Jn,
+    Xn = class extends m {
       constructor() {
         super("youtube.response.setting.SettingItem", [{
           no: 88478200,
           name: "backgroundPlayBackSettingRenderer",
           kind: "message",
-          T: () => jn
+          T: () => Mn
         }, {
           no: 66930374,
           name: "settingCategoryCollectionRenderer",
           kind: "message",
-          T: () => Vn
+          T: () => vn
         }])
       }
       create(e) {
@@ -4495,10 +4541,10 @@
           let [o, s] = e.tag();
           switch (o) {
             case 88478200:
-              r.backgroundPlayBackSettingRenderer = jn.internalBinaryRead(e, e.uint32(), n, r.backgroundPlayBackSettingRenderer);
+              r.backgroundPlayBackSettingRenderer = Mn.internalBinaryRead(e, e.uint32(), n, r.backgroundPlayBackSettingRenderer);
               break;
             case 66930374:
-              r.settingCategoryCollectionRenderer = Vn.internalBinaryRead(e, e.uint32(), n, r.settingCategoryCollectionRenderer);
+              r.settingCategoryCollectionRenderer = vn.internalBinaryRead(e, e.uint32(), n, r.settingCategoryCollectionRenderer);
               break;
             default:
               let a = n.readUnknownField;
@@ -4510,13 +4556,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.backgroundPlayBackSettingRenderer && jn.internalBinaryWrite(e.backgroundPlayBackSettingRenderer, t.tag(88478200, f.LengthDelimited).fork(), n).join(), e.settingCategoryCollectionRenderer && Vn.internalBinaryWrite(e.settingCategoryCollectionRenderer, t.tag(66930374, f.LengthDelimited).fork(), n).join();
+        e.backgroundPlayBackSettingRenderer && Mn.internalBinaryWrite(e.backgroundPlayBackSettingRenderer, t.tag(88478200, f.LengthDelimited).fork(), n).join(), e.settingCategoryCollectionRenderer && vn.internalBinaryWrite(e.settingCategoryCollectionRenderer, t.tag(66930374, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    _ = new _n,
-    Jn = class extends g {
+    _ = new Xn,
+    qn = class extends m {
       constructor() {
         super("youtube.response.setting.BackgroundPlayBackSettingRenderer", [{
           no: 1,
@@ -4601,8 +4647,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    jn = new Jn,
-    Xn = class extends g {
+    Mn = new qn,
+    Yn = class extends m {
       constructor() {
         super("youtube.response.setting.SettingCategoryCollectionRenderer", [{
           no: 2,
@@ -4666,8 +4712,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Vn = new Xn,
-    qn = class extends g {
+    vn = new Yn,
+    zn = class extends m {
       constructor() {
         super("youtube.response.setting.Icon", [{
           no: 1,
@@ -4704,14 +4750,14 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    le = new qn,
-    Yn = class extends g {
+    le = new zn,
+    Zn = class extends m {
       constructor() {
         super("youtube.response.setting.SubSetting", [{
           no: 61331416,
           name: "settingBooleanRenderer",
           kind: "message",
-          T: () => Mn
+          T: () => Gn
         }])
       }
       create(e) {
@@ -4725,7 +4771,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 61331416:
-              r.settingBooleanRenderer = Mn.internalBinaryRead(e, e.uint32(), n, r.settingBooleanRenderer);
+              r.settingBooleanRenderer = Gn.internalBinaryRead(e, e.uint32(), n, r.settingBooleanRenderer);
               break;
             default:
               let a = n.readUnknownField;
@@ -4737,13 +4783,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.settingBooleanRenderer && Mn.internalBinaryWrite(e.settingBooleanRenderer, t.tag(61331416, f.LengthDelimited).fork(), n).join();
+        e.settingBooleanRenderer && Gn.internalBinaryWrite(e.settingBooleanRenderer, t.tag(61331416, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Re = new Yn,
-    zn = class extends g {
+    Re = new Zn,
+    Qn = class extends m {
       constructor() {
         super("youtube.response.setting.SettingBooleanRenderer", [{
           no: 2,
@@ -4812,14 +4858,14 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Mn = new zn,
-    Zn = class extends g {
+    Gn = new Qn,
+    er = class extends m {
       constructor() {
         super("youtube.response.setting.ServiceEndpoint", [{
           no: 81212182,
           name: "setClientSettingEndpoint",
           kind: "message",
-          T: () => vn
+          T: () => Kn
         }])
       }
       create(e) {
@@ -4833,7 +4879,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 81212182:
-              r.setClientSettingEndpoint = vn.internalBinaryRead(e, e.uint32(), n, r.setClientSettingEndpoint);
+              r.setClientSettingEndpoint = Kn.internalBinaryRead(e, e.uint32(), n, r.setClientSettingEndpoint);
               break;
             default:
               let a = n.readUnknownField;
@@ -4845,19 +4891,19 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.setClientSettingEndpoint && vn.internalBinaryWrite(e.setClientSettingEndpoint, t.tag(81212182, f.LengthDelimited).fork(), n).join();
+        e.setClientSettingEndpoint && Kn.internalBinaryWrite(e.setClientSettingEndpoint, t.tag(81212182, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    se = new Zn,
-    Qn = class extends g {
+    se = new er,
+    tr = class extends m {
       constructor() {
         super("youtube.response.setting.SetClientSettingEndpoint", [{
           no: 1,
           name: "settingData",
           kind: "message",
-          T: () => Gn
+          T: () => Hn
         }])
       }
       create(e) {
@@ -4871,7 +4917,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 1:
-              r.settingData = Gn.internalBinaryRead(e, e.uint32(), n, r.settingData);
+              r.settingData = Hn.internalBinaryRead(e, e.uint32(), n, r.settingData);
               break;
             default:
               let a = n.readUnknownField;
@@ -4883,19 +4929,19 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.settingData && Gn.internalBinaryWrite(e.settingData, t.tag(1, f.LengthDelimited).fork(), n).join();
+        e.settingData && Hn.internalBinaryWrite(e.settingData, t.tag(1, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    vn = new Qn,
-    er = class extends g {
+    Kn = new tr,
+    nr = class extends m {
       constructor() {
         super("youtube.response.setting.SettingData", [{
           no: 1,
           name: "clientSettingEnum",
           kind: "message",
-          T: () => Kn
+          T: () => _n
         }, {
           no: 3,
           name: "boolValue",
@@ -4914,7 +4960,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 1:
-              r.clientSettingEnum = Kn.internalBinaryRead(e, e.uint32(), n, r.clientSettingEnum);
+              r.clientSettingEnum = _n.internalBinaryRead(e, e.uint32(), n, r.clientSettingEnum);
               break;
             case 3:
               r.boolValue = e.bool();
@@ -4929,13 +4975,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.clientSettingEnum && Kn.internalBinaryWrite(e.clientSettingEnum, t.tag(1, f.LengthDelimited).fork(), n).join(), e.boolValue !== !1 && t.tag(3, f.Varint).bool(e.boolValue);
+        e.clientSettingEnum && _n.internalBinaryWrite(e.clientSettingEnum, t.tag(1, f.LengthDelimited).fork(), n).join(), e.boolValue !== !1 && t.tag(3, f.Varint).bool(e.boolValue);
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Gn = new er,
-    tr = class extends g {
+    Hn = new nr,
+    rr = class extends m {
       constructor() {
         super("youtube.response.setting.ClientSettingEnum", [{
           no: 1,
@@ -4972,9 +5018,9 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Kn = new tr;
-  var il = m(h(), 1);
-  var nr = class extends g {
+    _n = new rr;
+  var ol = g(h(), 1);
+  var ir = class extends m {
       constructor() {
         super("youtube.response.watch.Watch", [{
           no: 1,
@@ -5012,8 +5058,8 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Zr = new nr,
-    rr = class extends g {
+    ei = new ir,
+    ar = class extends m {
       constructor() {
         super("youtube.response.watch.Content", [{
           no: 2,
@@ -5058,15 +5104,15 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Z = new rr;
-  var ul = m(h(), 1);
-  var ur = class extends g {
+    Z = new ar;
+  var dl = g(h(), 1);
+  var dr = class extends m {
       constructor() {
         super("youtube.response.config.Config", [{
           no: 1,
           name: "response_context",
           kind: "message",
-          T: () => ir
+          T: () => or
         }])
       }
       create(e) {
@@ -5080,7 +5126,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 1:
-              r.responseContext = ir.internalBinaryRead(e, e.uint32(), n, r.responseContext);
+              r.responseContext = or.internalBinaryRead(e, e.uint32(), n, r.responseContext);
               break;
             default:
               let a = n.readUnknownField;
@@ -5092,19 +5138,19 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.responseContext && ir.internalBinaryWrite(e.responseContext, t.tag(1, f.LengthDelimited).fork(), n).join();
+        e.responseContext && or.internalBinaryWrite(e.responseContext, t.tag(1, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    gr = new ur,
-    fr = class extends g {
+    kr = new dr,
+    pr = class extends m {
       constructor() {
         super("youtube.response.config.ResponseContext", [{
           no: 16,
           name: "globalConfigGroup",
           kind: "message",
-          T: () => ar
+          T: () => sr
         }])
       }
       create(e) {
@@ -5118,7 +5164,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 16:
-              r.globalConfigGroup = ar.internalBinaryRead(e, e.uint32(), n, r.globalConfigGroup);
+              r.globalConfigGroup = sr.internalBinaryRead(e, e.uint32(), n, r.globalConfigGroup);
               break;
             default:
               let a = n.readUnknownField;
@@ -5130,24 +5176,24 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.globalConfigGroup && ar.internalBinaryWrite(e.globalConfigGroup, t.tag(16, f.LengthDelimited).fork(), n).join();
+        e.globalConfigGroup && sr.internalBinaryWrite(e.globalConfigGroup, t.tag(16, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    ir = new fr,
-    dr = class extends g {
+    or = new pr,
+    yr = class extends m {
       constructor() {
         super("youtube.response.config.GlobalConfigGroup", [{
           no: 6,
           name: "coldConfigGroup",
           kind: "message",
-          T: () => or
+          T: () => lr
         }, {
           no: 7,
           name: "hotConfigGroup",
           kind: "message",
-          T: () => sr
+          T: () => cr
         }, {
           no: 4,
           name: "hot_hash_data",
@@ -5173,10 +5219,10 @@
           let [o, s] = e.tag();
           switch (o) {
             case 6:
-              r.coldConfigGroup = or.internalBinaryRead(e, e.uint32(), n, r.coldConfigGroup);
+              r.coldConfigGroup = lr.internalBinaryRead(e, e.uint32(), n, r.coldConfigGroup);
               break;
             case 7:
-              r.hotConfigGroup = sr.internalBinaryRead(e, e.uint32(), n, r.hotConfigGroup);
+              r.hotConfigGroup = cr.internalBinaryRead(e, e.uint32(), n, r.hotConfigGroup);
               break;
             case 4:
               r.hotHashData = e.string();
@@ -5194,13 +5240,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.coldConfigGroup && or.internalBinaryWrite(e.coldConfigGroup, t.tag(6, f.LengthDelimited).fork(), n).join(), e.hotConfigGroup && sr.internalBinaryWrite(e.hotConfigGroup, t.tag(7, f.LengthDelimited).fork(), n).join(), e.hotHashData !== void 0 && t.tag(4, f.LengthDelimited).string(e.hotHashData), e.coldHashData !== void 0 && t.tag(5, f.LengthDelimited).string(e.coldHashData);
+        e.coldConfigGroup && lr.internalBinaryWrite(e.coldConfigGroup, t.tag(6, f.LengthDelimited).fork(), n).join(), e.hotConfigGroup && cr.internalBinaryWrite(e.hotConfigGroup, t.tag(7, f.LengthDelimited).fork(), n).join(), e.hotHashData !== void 0 && t.tag(4, f.LengthDelimited).string(e.hotHashData), e.coldHashData !== void 0 && t.tag(5, f.LengthDelimited).string(e.coldHashData);
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    ar = new dr,
-    pr = class extends g {
+    sr = new yr,
+    hr = class extends m {
       constructor() {
         super("youtube.response.config.ColdConfigGroup", [])
       }
@@ -5216,14 +5262,14 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    or = new pr,
-    yr = class extends g {
+    lr = new hr,
+    mr = class extends m {
       constructor() {
         super("youtube.response.config.HotConfigGroup", [{
           no: 138536474,
           name: "mediaHotConfig",
           kind: "message",
-          T: () => lr
+          T: () => ur
         }])
       }
       create(e) {
@@ -5237,7 +5283,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 138536474:
-              r.mediaHotConfig = lr.internalBinaryRead(e, e.uint32(), n, r.mediaHotConfig);
+              r.mediaHotConfig = ur.internalBinaryRead(e, e.uint32(), n, r.mediaHotConfig);
               break;
             default:
               let a = n.readUnknownField;
@@ -5249,19 +5295,19 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.mediaHotConfig && lr.internalBinaryWrite(e.mediaHotConfig, t.tag(138536474, f.LengthDelimited).fork(), n).join();
+        e.mediaHotConfig && ur.internalBinaryWrite(e.mediaHotConfig, t.tag(138536474, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    sr = new yr,
-    hr = class extends g {
+    cr = new mr,
+    gr = class extends m {
       constructor() {
         super("youtube.response.config.MediaHotConfig", [{
           no: 146311580,
           name: "onesieHotConfig",
           kind: "message",
-          T: () => cr
+          T: () => fr
         }])
       }
       create(e) {
@@ -5275,7 +5321,7 @@
           let [o, s] = e.tag();
           switch (o) {
             case 146311580:
-              r.onesieHotConfig = cr.internalBinaryRead(e, e.uint32(), n, r.onesieHotConfig);
+              r.onesieHotConfig = fr.internalBinaryRead(e, e.uint32(), n, r.onesieHotConfig);
               break;
             default:
               let a = n.readUnknownField;
@@ -5287,13 +5333,13 @@
         return r
       }
       internalBinaryWrite(e, t, n) {
-        e.onesieHotConfig && cr.internalBinaryWrite(e.onesieHotConfig, t.tag(146311580, f.LengthDelimited).fork(), n).join();
+        e.onesieHotConfig && fr.internalBinaryWrite(e.onesieHotConfig, t.tag(146311580, f.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    lr = new hr,
-    mr = class extends g {
+    ur = new gr,
+    br = class extends m {
       constructor() {
         super("youtube.response.config.OnesieHotConfig", [{
           no: 1,
@@ -5354,13 +5400,13 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    cr = new mr;
-  var jl = m(h(), 1);
-  var dl = m(h(), 1);
-  var yl = m(h(), 1);
-  var Rl = m(h(), 1);
-  var Qr = (n => (n[n.NONE = 0] = "NONE", n[n.GZIP = 1] = "GZIP", n[n.BROTLI = 2] = "BROTLI", n))(Qr || {}),
-    br = class extends g {
+    fr = new br;
+  var Ml = g(h(), 1);
+  var yl = g(h(), 1);
+  var ml = g(h(), 1);
+  var Bl = g(h(), 1);
+  var ti = (n => (n[n.NONE = 0] = "NONE", n[n.GZIP = 1] = "GZIP", n[n.BROTLI = 2] = "BROTLI", n))(ti || {}),
+    Rr = class extends m {
       constructor() {
         super("youtube.ump.encrypted.EncryptedInnertubeResponsePart", [{
           no: 1,
@@ -5381,7 +5427,7 @@
           no: 4,
           name: "compressionAlgorithm",
           kind: "enum",
-          T: () => ["youtube.ump.encrypted.CompressionAlgorithm", Qr]
+          T: () => ["youtube.ump.encrypted.CompressionAlgorithm", ti]
         }])
       }
       create(e) {
@@ -5421,9 +5467,9 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Ti = new br;
-  var Wl = m(h(), 1);
-  var kr = class extends g {
+    xi = new Rr;
+  var Sl = g(h(), 1);
+  var wr = class extends m {
       constructor() {
         super("youtube.ump.encrypted.OnesieInnertubeResponse", [{
           no: 4,
@@ -5461,13 +5507,13 @@
         return i !== !1 && (i == !0 ? d.onWrite : i)(this.typeName, e, t), t
       }
     },
-    Ci = new kr;
+    Wi = new wr;
 
-  function xi(l) {
+  function Ni(l) {
     l.adPlacements?.length && (l.adPlacements.length = 0), l.adSlots?.length && (l.adSlots.length = 0), delete l?.playbackTracking?.pageadViewthroughconversion
   }
 
-  function Wi(l) {
+  function Si(l) {
     let e = l.playabilityStatus;
     e.pictureInPictureRender = me.create({
       pictureInPictureAbility: {
@@ -5493,7 +5539,7 @@
       }
     }
   }
-  var Ni = {
+  var Oi = {
     de: "Deutsch",
     ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439",
     fr: "Fran\xE7ais",
@@ -5507,7 +5553,7 @@
     und: "@VirgilClyne"
   };
 
-  function Si(l, e) {
+  function Pi(l, e) {
     e !== "off" && ce(l, "captionTracks", t => {
       let n = t.captionTracks,
         i = t.audioTracks;
@@ -5541,7 +5587,7 @@
           for (let a of i) a.captionTrackIndices?.includes(s) || a.captionTrackIndices.push(s), a.defaultCaptionTrackIndex = s, a.captionsInitialState = 3
         }
       }
-      return t.translationLanguages = Object.entries(Ni).map(([r, c]) => ke.create({
+      return t.translationLanguages = Object.entries(Oi).map(([r, c]) => ke.create({
         languageCode: r,
         languageName: {
           runs: [{
@@ -5552,11 +5598,11 @@
     })
   }
 
-  function Rr(l, e) {
-    xi(l), Wi(l), Si(l, e)
+  function Br(l, e) {
+    Ni(l), Si(l), Pi(l, e)
   }
 
-  function ei(l) {
+  function ni(l) {
     if (l.length < 1e3) return !1;
     let e = [112, 97, 103, 101, 97, 100],
       t = l.length,
@@ -5571,19 +5617,19 @@
     return !1
   }
 
-  function Oi(l) {
-    return l ? d.list(l)?.some(t => ei(t.data)) ?? !1 : !1
+  function Ui(l) {
+    return l ? d.list(l)?.some(t => ni(t.data)) ?? !1 : !1
   }
 
-  function Pi(l, e) {
+  function Ei(l, e) {
     let t = l.no;
     if (e.whiteNo.includes(t)) return !1;
     if (e.blackNo.includes(t)) return !0;
-    let n = ei(l.data);
+    let n = ni(l.data);
     return n ? e.blackNo.push(t) : e.whiteNo.push(t), e.dirty = !0, n
   }
 
-  function Ui(l, e) {
+  function Fi(l, e) {
     let t = !1;
     return ce(l, "renderInfo", n => {
       let i = n.renderInfo?.layoutRender?.eml?.split("|")?.[0] ?? "";
@@ -5591,55 +5637,55 @@
       else if (e.blackEml.includes(i) || /shorts(?!_pivot_item)/.test(i)) t = !0;
       else {
         let r = n?.videoInfo?.videoContext?.videoContent;
-        r && (t = Oi(r), t ? e.blackEml.push(i) : e.whiteEml.push(i), e.dirty = !0)
+        r && (t = Ui(r), t ? e.blackEml.push(i) : e.whiteEml.push(i), e.dirty = !0)
       }
       return !0
     }), t
   }
 
-  function Ei(l, e) {
+  function Li(l, e) {
     let t = d.list(l)[0];
-    return t ? Pi(t, e) : Ui(l, e)
+    return t ? Ei(t, e) : Fi(l, e)
   }
 
-  function wr(l, e) {
+  function Ir(l, e) {
     let t = !1;
     return ce(l, "richItemContents", n => {
       let i = n.richItemContents;
       if (!Array.isArray(i)) return !1;
-      for (let r = i.length - 1; r >= 0; r--) Ei(i[r], e) && (i.splice(r, 1), t = !0)
+      for (let r = i.length - 1; r >= 0; r--) Li(i[r], e) && (i.splice(r, 1), t = !0)
     }), t
   }
 
-  function Br(l, {
+  function Tr(l, {
     state: e
   }) {
     return {
-      bodyChanged: wr(l, e.adCache),
+      bodyChanged: Ir(l, e.adCache),
       stateChanged: e.adCache.dirty
     }
   }
 
-  function Fi(l, {
+  function Ai(l, {
     params: e
   }) {
-    return Rr(l, e.captionLang), {
+    return Br(l, e.captionLang), {
       bodyChanged: !0,
       stateChanged: !1
     }
   }
 
-  function Li(l) {
+  function Di(l) {
     let e = !1,
       t = l.entries?.length ?? 0;
-    for (let n = t - 1; n >= 0; n--) l.entries[n].command?.reelWatchEndpoint?.overlay || (l.entries.splice(n, 1), e = !0);
+    for (let n = t - 1; n >= 0; n--) l.entries[n].command?.reelWatchEndpoint?.adClientParams?.isAd && (l.entries.splice(n, 1), e = !0);
     return {
       bodyChanged: e,
       stateChanged: !1
     }
   }
 
-  function Ai(l, {
+  function $i(l, {
     params: e
   }) {
     let t = ["SPunlimited"];
@@ -5656,7 +5702,7 @@
     }
   }
 
-  function Di(l) {
+  function ji(l) {
     return ce(l.settingItems, "categoryId", e => {
       e.categoryId === 10135 && e.subSettings.push(Re.create({
         settingBooleanRenderer: {
@@ -5699,18 +5745,18 @@
     }
   }
 
-  function $i(l, {
+  function Vi(l, {
     params: e,
     state: t
   }) {
-    for (let n of l.contents) n.player && Rr(n.player, e.captionLang), n.next && wr(n.next, t.adCache);
+    for (let n of l.contents) n.player && Br(n.player, e.captionLang), n.next && Ir(n.next, t.adCache);
     return {
       bodyChanged: l.contents.length > 0,
       stateChanged: t.adCache.dirty
     }
   }
 
-  function ti(l, {
+  function ri(l, {
     state: e,
     platformKey: t
   }) {
@@ -5739,50 +5785,50 @@
       stateChanged: !0
     })
   }
-  var ji = [{
+  var Mi = [{
     path: "browse",
-    msgType: Jr,
-    handler: Br
+    msgType: qr,
+    handler: Tr
   }, {
     path: "next",
     msgType: re,
-    handler: Br
+    handler: Tr
   }, {
     path: "player",
     msgType: oe,
-    handler: Fi
-  }, {
-    path: "search",
-    msgType: Xr,
-    handler: Br
-  }, {
-    path: "reel_watch_sequence",
-    msgType: qr,
-    handler: Li
-  }, {
-    path: "guide",
-    msgType: Yr,
     handler: Ai
   }, {
-    path: "get_setting",
+    path: "search",
+    msgType: Yr,
+    handler: Tr
+  }, {
+    path: "reel_watch_sequence",
     msgType: zr,
     handler: Di
   }, {
-    path: "get_watch",
+    path: "guide",
     msgType: Zr,
     handler: $i
   }, {
+    path: "get_setting",
+    msgType: Qr,
+    handler: ji
+  }, {
+    path: "get_watch",
+    msgType: ei,
+    handler: Vi
+  }, {
     path: "config",
-    msgType: gr,
-    handler: ti
+    msgType: kr,
+    handler: ri
   }, {
     path: "log_event",
-    msgType: gr,
-    handler: ti
+    msgType: kr,
+    handler: ri
   }];
 
-  function ni(l) {
-    let e = ji.find(r => l.url.includes(r.path));
+  function ii(l) {
+    let e = Mi.find(r => l.url.includes(r.path));
     if (!e) return null;
     if (l.bodyBytes == null) return {
       action: "exit",
@@ -5805,8 +5851,8 @@
       changed: i
     }
   }
-  var lc = m(h(), 1);
-  var tc = m(h(), 1);
+  var uc = g(h(), 1);
+  var rc = g(h(), 1);
   var ue = class {
       _times = new Map;
       name;
@@ -5871,7 +5917,7 @@
   pe(K, "instances", {}), pe(K, "classNames", {
     QuanX: (e, t, n) => new je(e, t, n),
     Surge: (e, t, n) => new we(e, t, n),
-    Loon: (e, t, n) => new Ir(e, t, n)
+    Loon: (e, t, n) => new Cr(e, t, n)
   });
   var Ve = class extends K {
       getFn(e, t, n) {
@@ -6001,7 +6047,7 @@
     id: "sessionIndex",
     status: "statusCode"
   });
-  var Ir = class extends we {
+  var Cr = class extends we {
     decodeParams(e) {
       if (typeof $argument < "u")
         for (let t of Object.keys(e)) {
@@ -6011,27 +6057,27 @@
       return e
     }
   };
-  var ic = m(h(), 1),
+  var oc = g(h(), 1),
     fe = {
       config: "YouTubeConfig",
       advertiseInfo: "YouTubeAdvertiseInfo"
     },
-    Tr = {
+    xr = {
       music: "youtubeMusic",
       video: "youtube"
     };
   var F = K.getInstance("YouTube");
 
-  function Vi() {
+  function vi() {
     return (F.request.headers["user-agent"] ?? F.request.headers["User-Agent"]).includes("music")
   }
 
-  function Cr() {
-    return Vi() ? Tr.music : Tr.video
+  function Wr() {
+    return vi() ? xr.music : xr.video
   }
-  var fc = m(h(), 1);
+  var pc = g(h(), 1);
 
-  function ri() {
+  function ai() {
     return F.decodeParams({
       captionLang: "off",
       blockUpload: !0,
@@ -6039,10 +6085,10 @@
       blockShorts: !1
     })
   }
-  var hc = m(h(), 1);
-  var ii = "1.0";
+  var gc = g(h(), 1);
+  var oi = "1.0";
 
-  function Mi() {
+  function Gi() {
     return {
       whiteNo: [],
       blackNo: [],
@@ -6052,9 +6098,9 @@
     }
   }
 
-  function ai() {
+  function si() {
     let l = F.getJSON(fe.advertiseInfo);
-    return l?.version !== ii ? Mi() : {
+    return l?.version !== oi ? Gi() : {
       whiteNo: l.whiteNo,
       blackNo: l.blackNo,
       whiteEml: l.whiteEml,
@@ -6063,7 +6109,7 @@
     }
   }
 
-  function oi(l) {
+  function li(l) {
     if (!l.dirty) return;
     let {
       whiteNo: e,
@@ -6071,7 +6117,7 @@
       whiteEml: n,
       blackEml: i
     } = l, r = {
-      version: ii,
+      version: oi,
       whiteNo: e,
       blackNo: t,
       whiteEml: n,
@@ -6079,38 +6125,38 @@
     };
     F.setJSON(r, fe.advertiseInfo)
   }
-  var kc = m(h(), 1);
+  var wc = g(h(), 1);
 
-  function si() {
+  function ci() {
     return F.getJSON(fe.config) ?? {}
   }
 
-  function li(l) {
+  function ui(l) {
     F.debug(`saveKeyConfig: ${JSON.stringify(l)}`), F.setJSON(l, fe.config)
   }
 
-  function vi() {
+  function Ki() {
     let l = {
-        adCache: ai(),
-        config: si()
+        adCache: si(),
+        config: ci()
       },
-      e = ni({
+      e = ii({
         url: F.request.url,
         bodyBytes: F.response.bodyBytes,
         state: l,
-        params: ri(),
-        platformKey: Cr()
+        params: ai(),
+        platformKey: Wr()
       });
     if (e == null) {
       F.msg("YouTube Enhance", "\u811A\u672C\u9700\u8981\u66F4\u65B0", "\u5916\u90E8\u8D44\u6E90 -> \u5168\u90E8\u66F4\u65B0"), F.exit();
       return
     }
-    e.changed && (oi(e.state.adCache), li(e.state.config)), e.action === "body" && e.bodyBytes ? F.done({
+    e.changed && (li(e.state.adCache), ui(e.state.config)), e.action === "body" && e.bodyBytes ? F.done({
       bodyBytes: e.bodyBytes
     }) : F.exit()
   }
   try {
-    vi()
+    Ki()
   } catch (l) {
     console.log(String(l)), F.exit()
   }
